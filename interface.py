@@ -34,13 +34,13 @@ def imagependu(mot_myst) :
 	global nbr_err
 	global nbr_err_max
 	if mot_myst==mot_couv :
-		image = Image.open("cup.png") 
+		image = Image.open("images/cup.png") 
 		nvlle_image = image.resize((int(image.width/4), int(image.height/4)))	# redimensionne l'image d'origine	
 	elif nbr_err<=nbr_err_max :	
-		image = Image.open("pendu"+str(nbr_err)+".png") 	# ouvre le fichier image du pendu correspondant au nombre d'erreurs
+		image = Image.open("images/pendu"+str(nbr_err)+".png") 	# ouvre le fichier image du pendu correspondant au nombre d'erreurs
 		nvlle_image = image.resize((int(image.width/8), int(image.height/8)))
 	else :
-		image = Image.open("fantome.png") 
+		image = Image.open("images/fantome.png") 
 		nvlle_image = image.resize((int(image.width/6), int(image.height/6)))
 	
 	photo = ImageTk.PhotoImage(nvlle_image)		
